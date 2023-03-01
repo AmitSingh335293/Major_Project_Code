@@ -7,10 +7,10 @@ const fs = require("fs");
 
 // MONGO_DB_URI= "mongodb+srv://amit:v8z4OLmvTWIeT6BC@cluster0.1rts2gy.mongodb.net/?retryWrites=true&w=majority"
 // "mongodb://localhost:27017/jobPortal"
-
+ URI = "mongodb://amit:v8z4OLmvTWIeT6BC@ac-izxfgoi-shard-00-00.1rts2gy.mongodb.net:27017,ac-izxfgoi-shard-00-01.1rts2gy.mongodb.net:27017,ac-izxfgoi-shard-00-02.1rts2gy.mongodb.net:27017/?ssl=true&replicaSet=atlas-10eb45-shard-0&authSource=admin&retryWrites=true&w=majority";
 // MongoDB
 mongoose
-  .connect("mongodb+srv://amit:v8z4OLmvTWIeT6BC@cluster0.1rts2gy.mongodb.net/portal?retryWrites=true&w=majority", {
+  .connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -20,7 +20,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // initialising directories
-if (!fs.existsSync("./public")) {
+if (!fs.existsSync("./public")) { 
   fs.mkdirSync("./public");
 }
 if (!fs.existsSync("./public/resume")) {

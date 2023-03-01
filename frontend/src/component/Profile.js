@@ -276,7 +276,7 @@ const Profile = (props) => {
                   fullWidth
                 />
               </Grid>
-              <Grid item>
+              {/* <Grid item>
                 <FileUploadInput
                   className={classes.inputBox}
                   label="Resume (.pdf)"
@@ -295,7 +295,7 @@ const Profile = (props) => {
                   handleInput={handleInput}
                   identifier={"profile"}
                 />
-              </Grid>
+              </Grid> */}
             </Grid>
             <Button
               variant="contained"
